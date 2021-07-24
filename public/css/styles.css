@@ -1,13 +1,13 @@
 body {
   text-align: center;
-  background-color: #283149;
+  background-color: hsl(27, 50%, 50%);
 }
 
 h1 {
   font-size: 6rem;
   color: #dbedf3;
   font-family: "Arvo", cursive;
-  text-shadow: 3px 0 #da0463;
+  text-shadow: 3px 0 hsl(204, 96%, 44%);
 }
 
 footer {
@@ -56,10 +56,10 @@ footer {
   font-family: "Arvo", cursive;
   line-height: 2;
   font-weight: 900;
-  color: #da0463;
+  color: hsl(246, 46%, 37%);
   text-shadow: 3px 0 #dbedf3;
   border-radius: 15px;
-  display: inline-block;
+  display: table-column;
   width: 12%;
   height: 150px;
   text-align: center;
@@ -67,8 +67,9 @@ footer {
   background-color: white;
 }
 
-.drum:hover {
-  color: red;
+.drum:hover,
+.drum:focus {
+  color: hsl(246, 46%, 67%);
   cursor: pointer;
 }
 .last-line {
@@ -80,6 +81,6 @@ footer {
 }
 
 .my-name:hover {
-  color: #f0afaf;
+  color: hsl(333, 85%, 53%);
   font-weight: bold;
 }

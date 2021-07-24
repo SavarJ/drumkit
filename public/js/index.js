@@ -4,13 +4,13 @@ addEventListeners();
 
 // Adding the sound files
 function addSoundFiles() {
-  soundFiles.set("w", "sounds/tom-1.mp3");
-  soundFiles.set("a", "sounds/tom-2.mp3");
-  soundFiles.set("s", "sounds/tom-3.mp3");
-  soundFiles.set("d", "sounds/tom-4.mp3");
-  soundFiles.set("j", "sounds/snare.mp3");
-  soundFiles.set("k", "sounds/crash.mp3");
-  soundFiles.set("l", "sounds/kick-bass.mp3");
+  soundFiles.set("w", "public/sounds/tom-1.mp3");
+  soundFiles.set("a", "public/sounds/tom-2.mp3");
+  soundFiles.set("s", "public/sounds/tom-3.mp3");
+  soundFiles.set("d", "public/sounds/tom-4.mp3");
+  soundFiles.set("j", "public/sounds/snare.mp3");
+  soundFiles.set("k", "public/sounds/crash.mp3");
+  soundFiles.set("l", "public/sounds/kick-bass.mp3");
 }
 
 // Setting the event listeneres
