@@ -18,23 +18,18 @@ function addSoundFiles() {
 function addEventListenersToDrums() {
   const drumButtons = document.querySelectorAll("button.drum");
   for (let i = 0; i < drumButtons.length; i++) {
-    drumButtons[i].addEventListener("click", handleClick);
+    drumButtons[i].addEventListener("click", (event) =>
+      playSoundAndAnimate(event.target.innerText)
+    );
   }
-  document.addEventListener("keypress", handleKey);
-}
-
-function handleClick() {
-  const buttonInnerHTML = this.innerHTML;
-  playSoundAndAnimate(buttonInnerHTML);
-}
-
-function handleKey(event) {
-  playSoundAndAnimate(event.key.toLowerCase());
+  document.addEventListener("keypress", (event) =>
+    playSoundAndAnimate(event.key.toLowerCase())
+  );
 }
 
 function playSoundAndAnimate(key) {
-  const button = document.querySelector("button." + key);
   if (soundFiles.has(key)) {
+    const button = document.querySelector("button." + key);
     new Audio(soundFiles.get(key)).play();
     button.classList.toggle("pressed");
     setTimeout(function () {
@@ -47,20 +42,22 @@ function addEventListenersToThemeButtons() {
   const dark = document.querySelector(".btn-dark");
   const light = document.querySelector(".btn-light");
 
-  dark.addEventListener("click", function () {
-    addStyleSheet("dark");
-  });
-  light.addEventListener("click", function () {
-    addStyleSheet("light");
-  });
+  dark.addEventListener("click", () => addStyleSheet("dark"));
+  light.addEventListener("click", () => addStyleSheet("light"));
 }
 
 function addStyleSheet(name) {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.type = "text/css";
-  link.href = "public/css/" + name + ".css";
-  link.id = "other-theme";
-  document.getElementById("other-name")?.remove();
-  document.head.appendChild(link);
+  const newLink = document.createElement("link");
+  newLink.rel = "stylesheet";
+  newLink.type = "text/css";
+  newLink.href = "public/css/" + name + ".css";
+  newLink.id = "other-theme";
+  const links = document.querySelectorAll("link");
+  links.forEach((link) => {
+    if (link.id === "other-theme") {
+      link.remove();
+      return;
+    }
+  });
+  document.head.appendChild(newLink);
 }
