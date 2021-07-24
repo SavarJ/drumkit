@@ -1,6 +1,6 @@
-# Tindog
+# DrumKit
 
-A simple Drum Kit desktop web app that allows users to play the drums by clicking it or using their keyboard.
+A simple Drum Kit desktop web app that allows users to play the drums by clicking it or using their keyboard. Users can switch between **Light** and **Dark** Mode
 
 <br>
 
@@ -16,11 +16,13 @@ A simple Drum Kit desktop web app that allows users to play the drums by clickin
 
 ## Deployment
 
-**[Live Demo: https://savarj.github.io/tindog/](https://savarj.github.io/tindog/)**
+**[Live Demo: https://savarj.github.io/drumkit/](https://savarj.github.io/drumkit/)**
 
 <br>
 
-![Search-page](public/images/capture.png)
+![Drumkit-LightMode](public/images/drumkit-light.png)
+
+![Drumkit-DarkMode](public/images/drumkit-dark.png)
 
 <br>
 
