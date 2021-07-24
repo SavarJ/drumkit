@@ -1,13 +1,12 @@
 body {
   text-align: center;
-  background-color: hsl(27, 50%, 50%);
 }
 
 h1 {
   font-size: 6rem;
   color: #dbedf3;
   font-family: "Arvo", cursive;
-  text-shadow: 3px 0 hsl(204, 96%, 44%);
+  margin: 4% auto 2%;
 }
 
 footer {
@@ -42,7 +41,7 @@ footer {
 }
 
 .set {
-  margin: 7.5% auto;
+  margin: 4% auto;
 }
 
 .pressed {
@@ -56,10 +55,9 @@ footer {
   font-family: "Arvo", cursive;
   line-height: 2;
   font-weight: 900;
-  color: hsl(246, 46%, 37%);
   text-shadow: 3px 0 #dbedf3;
   border-radius: 15px;
-  display: table-column;
+  display: inline-block;
   width: 12%;
   height: 150px;
   text-align: center;
@@ -67,11 +65,46 @@ footer {
   background-color: white;
 }
 
-.drum:hover,
-.drum:focus {
-  color: hsl(246, 46%, 67%);
+.drum:hover {
   cursor: pointer;
 }
+
+.btn {
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: 20px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  font-size: 2rem;
+}
+
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid white;
+}
+
+.btn-dark:hover {
+  background-color: rgb(66, 66, 66);
+}
+
+.btn-light {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.btn-light:hover {
+  background-color: rgb(246, 246, 246);
+}
+
 .last-line {
   font-family: "Indie Flower", cursive;
 }

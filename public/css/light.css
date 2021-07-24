@@ -1,0 +1,16 @@
+body {
+  background-color: hsl(27, 50%, 50%);
+}
+
+h1 {
+  text-shadow: 3px 0 hsl(204, 96%, 44%);
+}
+
+.drum {
+  color: hsl(246, 46%, 37%);
+}
+
+.drum:hover,
+.drum:focus {
+  color: hsl(246, 46%, 67%);
+}
