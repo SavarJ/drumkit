@@ -1,6 +1,7 @@
-let soundFiles = new Map();
+const soundFiles = new Map();
 addSoundFiles();
-addEventListeners();
+addEventListenersToDrums();
+addEventListenersToThemeButtons();
 
 // Adding the sound files
 function addSoundFiles() {
@@ -14,8 +15,8 @@ function addSoundFiles() {
 }
 
 // Setting the event listeneres
-function addEventListeners() {
-  let drumButtons = document.querySelectorAll("button.drum");
+function addEventListenersToDrums() {
+  const drumButtons = document.querySelectorAll("button.drum");
   for (let i = 0; i < drumButtons.length; i++) {
     drumButtons[i].addEventListener("click", handleClick);
   }
@@ -23,7 +24,7 @@ function addEventListeners() {
 }
 
 function handleClick() {
-  let buttonInnerHTML = this.innerHTML;
+  const buttonInnerHTML = this.innerHTML;
   playSoundAndAnimate(buttonInnerHTML);
 }
 
@@ -32,11 +33,34 @@ function handleKey(event) {
 }
 
 function playSoundAndAnimate(key) {
+  const button = document.querySelector("button." + key);
   if (soundFiles.has(key)) {
     new Audio(soundFiles.get(key)).play();
-    document.querySelector("button." + key).classList.toggle("pressed");
+    button.classList.toggle("pressed");
     setTimeout(function () {
-      document.querySelector("button." + key).classList.toggle("pressed");
+      button.classList.toggle("pressed");
     }, 250);
   }
+}
+
+function addEventListenersToThemeButtons() {
+  const dark = document.querySelector(".btn-dark");
+  const light = document.querySelector(".btn-light");
+
+  dark.addEventListener("click", function () {
+    addStyleSheet("dark");
+  });
+  light.addEventListener("click", function () {
+    addStyleSheet("light");
+  });
+}
+
+function addStyleSheet(name) {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  link.href = "public/css/" + name + ".css";
+  link.id = "other-theme";
+  document.getElementById("other-name")?.remove();
+  document.head.appendChild(link);
 }
