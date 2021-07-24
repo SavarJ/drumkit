@@ -2,8 +2,6 @@
 
 A simple Drum Kit desktop web app that allows users to play the drums by clicking it or using their keyboard. Users can switch between **Light** and **Dark** Mode
 
-<br>
-
 ## Table of Contents
 
 - [Deployment](#deployment)
@@ -22,9 +20,9 @@ A simple Drum Kit desktop web app that allows users to play the drums by clickin
 
 ![Drumkit-LightMode](public/images/drumkit-light.png)
 
-![Drumkit-DarkMode](public/images/drumkit-dark.png)
-
 <br>
+
+![Drumkit-DarkMode](public/images/drumkit-dark.png)
 
 ## Built With
 
