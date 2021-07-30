@@ -6,6 +6,7 @@ A simple Drum Kit desktop web app that allows users to play the drums by clickin
 
 - [Deployment](#deployment)
 - [Built With](#built-with)
+- [Install](#install)
 - [Author(s)](#authors)
 - [License](#license)
 - [Acknowledgement](#acknowledgement)
@@ -29,6 +30,15 @@ A simple Drum Kit desktop web app that allows users to play the drums by clickin
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## Install
+
+    $ git clone https://github.com/SavarJ/drumkit.git
+    $ cd drumkit
+    
+### Running the project
+
+    $ start index.html
 
 ## Author(s)
 
